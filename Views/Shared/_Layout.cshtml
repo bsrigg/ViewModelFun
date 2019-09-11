@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ViewModelFun</title>
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
+                asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+                asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.css" />
+    </environment>
+</head>
+<body>
+    <div class="jumbotron text-center">
+        <h2>My ViewModelFun:</h2>
+    </div>
+    <div class="container body-content">
+        
+        <nav class="navbar navbar-inverse navbar-fixed-top ">
+            <div class="container-fluid-p-0">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Barry's Productions</a>
+                </div>
+                    <ul class="nav navbar-nav">
+                    <li class="active"><a href="/message">Home</a></li>
+                    <li><a href="/singleuser">User Page</a></li>
+                    <li><a href="/user">User Table</a></li>
+                    <li><a href="/number">Numbers Table</a></li>
+                    </ul>
+            </div>
+        </nav>
+    
+        @RenderBody()
+        
+    </div>
+    <footer>
+            <div class="jumbotron text-center" style="margin-bottom:0">
+                <div class="footer-copyright text-center py-3">© 2019 Copyright:
+                    <a href="/"> BarryRiggProductions.com</a>
+                </div>
+            </div>
+    </footer>
+
+    <environment include="Development">
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    </environment>
+
+</body>
+</html>

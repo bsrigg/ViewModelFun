@@ -1,0 +1,18 @@
+﻿@model List<Number>
+<h4 class="text-center">Here are some numbers!</h4><br>
+<table class="table table-striped table-hover table-bordered">
+    <thead>
+        <tr class="success">
+            <th>Numbers</th>
+        </tr>
+    </thead>
+    <tbody>
+
+@foreach(var number in Model)
+{
+        <tr>
+            <td>@number.MyNumber</td>
+        </tr>
+}
+    </tbody>
+</table>
